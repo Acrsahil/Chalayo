@@ -48,5 +48,4 @@ urlpatterns = [
     # for product activity in table 
     path('item-activity/',ItemActivityApiView.as_view()),
     path('item-activity/<int:pk>/',ItemActivityApiView.as_view()),
-
 ]

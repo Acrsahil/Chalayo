@@ -27,8 +27,13 @@ class BalanceAdjustService:
             if latest_remaining is None:
                 raise ValueError("No existing RemainingAmount record found for this customer")
 
-            amount = adjustment_amount if adjust_type == 'ADD' else -adjustment_amount
-            current_remaining = latest_remaining.remaining_amount + amount
+
+            if adjust_type == 'ADD':
+                amount = adjustment_amount
+                current_remaining = latest_remaining.remaining_amount + adjustment_amount
+            else:
+                amount = -adjustment_amount
+                current_remaining = latest_remaining.remaining_amount - adjustment_amount 
 
             new_remaining = RemainingAmount.objects.create(
                 customer=customer,
