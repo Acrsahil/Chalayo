@@ -11,6 +11,7 @@ from .views_dir.paymentOutView import PaymentOutApiView
 from .views_dir.balanceAdjustView import BalanceAdjustApiView
 from .views_dir.permissionView import PermissionApiView,RoleApiView
 from .views_dir.itemActivityView import ItemActivityApiView
+from .views_dir.chatView import ChatApiView
 
 CustomerApiView = CustomerApiView
 CustomerFilterApiView = CustomerFilterApiView
@@ -31,5 +32,7 @@ PermissionApiview = PermissionApiView
 RoleApiView = RoleApiView
 
 ItemActivityApiView = ItemActivityApiView
+ChatApiView = ChatApiView
+
     
         

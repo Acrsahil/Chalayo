@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import CustomerApiView,ProductApiView,ExpenseApiView,ProductCatApiView,ExpenseCatApiView,PaymentInApiView,PaymentOutApiView,BalanceAdjustApiView,PermissionApiview,RoleApiView,CustomerFilterApiView,ProductFilterApiView,ItemActivityApiView
+from .views import CustomerApiView,ProductApiView,ExpenseApiView,ProductCatApiView,ExpenseCatApiView,PaymentInApiView,PaymentOutApiView,BalanceAdjustApiView,PermissionApiview,RoleApiView,CustomerFilterApiView,ProductFilterApiView,ItemActivityApiView,ChatApiView
 
 urlpatterns = [
 
@@ -48,4 +48,8 @@ urlpatterns = [
     # for product activity in table 
     path('item-activity/',ItemActivityApiView.as_view()),
     path('item-activity/<int:pk>/',ItemActivityApiView.as_view()),
+
+
+    path('chat/',ChatApiView.as_view()),
+    path('chat/<int:pk>/',ChatApiView.as_view()),
 ]
