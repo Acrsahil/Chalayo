@@ -17,7 +17,7 @@ class CustomerApiView(APIView):
     def __get_company(self):
         return self.request.user.owned_company or self.request.user.active_company
     
-    def get(self,request,pk=None):
+    def get(self,pk=None):
         company = self.__get_company()
 
         if not company:
